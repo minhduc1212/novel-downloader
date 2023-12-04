@@ -141,6 +141,7 @@ export class Hetushu extends BaseRuleClass {
         credentials: "include",
       })
         .then((response) => response.headers.get("token"))
+        .then((token)    => log.debug("token"))
         .catch((error) => log.error(error));
 
       if (token) {
